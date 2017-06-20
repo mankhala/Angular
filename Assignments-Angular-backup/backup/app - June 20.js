@@ -20,8 +20,7 @@
 //         .otherwise('/contactus');
 // });
 
-//angular.module('confusionApp', ['ui.router'])
-angular.module('confusionApp', ['ui.router','ngResource'])
+angular.module('confusionApp', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
         

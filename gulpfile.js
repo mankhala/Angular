@@ -49,12 +49,24 @@ gulp.task('imagemin', function() {
     .pipe(notify({ message: 'Images task complete' }));
 });
 
-gulp.task('copyfonts', ['clean'], function() {
-   gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
-   .pipe(gulp.dest('./dist/fonts'));
-   gulp.src('./bower_components/bootstrap/dist/fonts/**/*.{ttf,woff,eof,svg}*')
-   .pipe(gulp.dest('./dist/fonts'));
+
+gulp.task('copyfonts', function() {
+ return del(['dist/fonts']),gulp.src('app/fonts/**/*')
+   .pipe(gulp.dest('dist/fonts'))
+   .pipe(notify({ message: 'Fonts task complete' }));
 });
+
+//gulp.task('copyfonts', ['clean'], function() {
+   //gulp.src('app/bower_components/font-awesome/fonts/**/*')
+ //   gulp.src('app/fonts/**/*')
+  // .pipe(notify({ message: 'Fonts task start' }));
+ //  .pipe(gulp.dest('/dist/fonts'));
+ //  .pipe(notify({ message: 'Fonts task complete' }));
+ //   gulp.src('app/bower_components/bootstrap/dist/fonts/**/*')
+  // .pipe(notify({ message: 'Glyphicons task start' }));
+  // .pipe(gulp.dest('/dist/fonts'));
+  // .pipe(notify({ message: 'Glyphicons task End' }));
+//});
 
 //Watch
 gulp.task('watch', ['browser-sync'], function() {
@@ -62,7 +74,10 @@ gulp.task('watch', ['browser-sync'], function() {
   gulp.watch('{app/scripts/**/*.js,app/styles/**/*.css,app/**/*.html}', ['usemin']);
       // Watch image files
   gulp.watch('app/images/**/*', ['imagemin']);
-
+  
+  // Watch fonts files
+  gulp.watch('app/fonts/**/*', ['copyfonts']);
+  
 });
 
 gulp.task('browser-sync', ['default'], function () {
@@ -71,6 +86,7 @@ gulp.task('browser-sync', ['default'], function () {
       'app/styles/**/*.css',
       'app/images/**/*.png',
       'app/scripts/**/*.js',
+      'app/fonts/**/*',
       'dist/**/*'
    ];
 
