@@ -1,0 +1,134 @@
+#BootStrap
+ 
+# BootStrap Week 1
+
+#http://brackets.io/
+#http://www.sublimetext.com/
+#http://www.getbootstrap.com/
+#https://fortawesome.github.io/Font-Awesome/
+#https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/bootstrap-social.css
+#http://lipis.github.io/bootstrap-social/
+
+# BootStrap Week 2
+
+# BootStrap Week 3
+
+# BootStrap Week 4
+#NODEJS
+
+#https://nodejs.org/
+#node -v
+#npm -v
+
+#GIT
+
+#http://git-scm.com/download
+
+
+#LESS
+
+
+npm install -g less
+lessc mystyles.less > mystyles.css
+
+#BOWER
+
+npm install -g bower
+bower init
+bower install bootstrap -S
+
+bower install font-awesome -S
+
+
+
+#Angular Week1
+bower install
+
+# Angular Week 2 
+#Grunt
+npm install -g grunt-cli
+npm install grunt --save-dev
+npm install grunt-contrib-jshint --save-dev
+
+npm install jshint-stylish --save-dev
+npm install time-grunt --save-dev
+
+npm install jit-grunt --save-dev
+#grunt
+npm install grunt-contrib-copy --save-dev
+npm install grunt-contrib-clean --save-dev
+npm install grunt-contrib-concat --save-dev
+ 
+npm install grunt-contrib-cssmin --save-dev
+ 
+npm install grunt-contrib-uglify --save-dev
+ 
+npm install grunt-filerev --save-dev
+ 
+npm install grunt-usemin --save-dev
+npm install grunt-contrib-watch --save-dev
+
+npm install grunt-contrib-connect --save-dev
+#grunt serve
+
+# GULP
+npm install -g gulp
+npm install gulp --save-dev
+npm install jshint gulp-jshint jshint-stylish gulp-imagemin gulp-concat gulp-uglify gulp-minify-css gulp-usemin gulp-cache gulp-changed gulp-rev gulp-rename gulp-notify  browser-sync del --save-dev
+gulp
+gulp watch
+
+# ANGULAR SCOPE
+npm install gulp-ng-annotate --save-dev
+
+# Angular Week 3
+
+bower install angular-route -S
+bower install angular-ui-router -S 
+
+# Angular Week 4
+
+#JSON SERVER
+npm install json-server -g
+
+#json-server --watch db.json
+
+#http://localhost:3000/
+
+#Angular Resource
+
+bower install angular-resource -S
+
+
+#Angular Testing 
+
+npm install jasmine-core --save-dev
+npm install karma-cli -g
+npm install karma-jasmine --save-dev
+npm install phantomjs karma-phantomjs-launcher karma-chrome-launcher --save-dev
+npm install karma --save-dev
+bower install angular-mocks -S
+# Start Karma from test folder
+karma start karma.conf.js
+
+#Protractor
+npm install protractor -g
+webdriver-manager update
+gulp watch
+protractor protractor.conf.js
+# Yo and Yomen
+npm install yo -g
+npm install generator-angular -g
+#yo angular
+
+git config --global http.proxy 10.90.255.7:8080
+git config --global http.proxy 10.90.240.132:8080
+git status 
+git add .
+git commit -m " Status"
+git pull 
+git push origin master:master
+git branch -b  BRANCHNAME
+git clone repository name 
+git checkout <commit hash> <filename>
+
