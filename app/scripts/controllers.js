@@ -10,15 +10,15 @@ angular.module('confusionApp')
         $scope.showMenu = false;
        // $scope.showMenu = true;
         $scope.message = "Loading ...";
-       // $scope.dishes = menuFactory.getDishes().query();
-        menuFactory.getDishes().query(
+        $scope.dishes = menuFactory.getDishes().query();
+       /* menuFactory.getDishes().query(
                 function(response) {
                     $scope.dishes = response;
                     $scope.showMenu = true;
                 },
                 function(response) {
                     $scope.message = "Error: "+response.status + " " + response.statusText;
-                });
+                });*/
      /*  $scope.dishes = menuFactory.getDishes();
         $scope.dishes= [];
             menuFactory.getDishes()
@@ -98,8 +98,8 @@ angular.module('confusionApp')
         $scope.showDish = false;
        // $scope.showDish = true;
         $scope.message="Loading ...";
-       // $scope.dish = menuFactory.getDishes().get({id:parseInt($stateParams.id,10)});    
-        $scope.dish = menuFactory.getDishes().get({id:parseInt($stateParams.id,10)})
+        $scope.dish = menuFactory.getDishes().get({id:parseInt($stateParams.id,10)});    
+       /* $scope.dish = menuFactory.getDishes().get({id:parseInt($stateParams.id,10)})
             .$promise.then(
                             function(response){
                                 $scope.dish = response;
@@ -108,7 +108,7 @@ angular.module('confusionApp')
                             function(response) {
                                 $scope.message = "Error: "+response.status + " " + response.statusText;
                             }
-            );
+            );*/
           /*  menuFactory.getDish(parseInt($stateParams.id,10))
             .then(
                 function(response){
@@ -150,8 +150,8 @@ angular.module('confusionApp')
           $scope.showDish = false;
          // $scope.showDish = true;
           $scope.message="Loading ...";
-        //  $scope.dish = menuFactory.getDishes().get({id:0});
-          $scope.dish = menuFactory.getDishes().get({id:0})
+          $scope.dish = menuFactory.getDishes().get({id:0});
+        /*  $scope.dish = menuFactory.getDishes().get({id:0})
                         .$promise.then(
                             function(response){
                                 $scope.dish = response;
@@ -160,7 +160,7 @@ angular.module('confusionApp')
                             function(response) {
                                 $scope.message = "Error: "+response.status + " " + response.statusText;
                             }
-                        );
+                        ); */
         /*    menuFactory.getDish(0)
             .then(
                 function(response){
